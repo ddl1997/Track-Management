@@ -6,7 +6,7 @@ public class Track {
 
 	private String car_id;
 	private double longitude;
-	private double lantitude;
+	private double latitude;
 	private Date date;
 	private double speed;
 	private boolean is_idle;
@@ -23,11 +23,11 @@ public class Track {
 	public void setLongitude(double longitude) {
 		this.longitude = longitude;
 	}
-	public double getLantitude() {
-		return lantitude;
+	public double getLatitude() {
+		return latitude;
 	}
-	public void setLantitude(double lantitude) {
-		this.lantitude = lantitude;
+	public void setLatitude(double lantitude) {
+		this.latitude = lantitude;
 	}
 	public Date getDate() {
 		return date;

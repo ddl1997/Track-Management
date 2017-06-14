@@ -25,7 +25,7 @@ public class DBOperate {
             pstmt.setString(1, in.getCar_id());
             pstmt.setString(2, date);
             pstmt.setDouble(3, in.getLongitude());
-            pstmt.setDouble(4, in.getLantitude());
+            pstmt.setDouble(4, in.getLatitude());
             pstmt.setDouble(5, in.getSpeed());
             pstmt.setBoolean(6, in.isIs_idle());
             pstmt.executeUpdate();
@@ -50,7 +50,7 @@ public class DBOperate {
             pstmt = (PreparedStatement) con.prepareStatement(sql);
             pstmt.setString(1, in.getCar_id());
             pstmt.setDouble(2, in.getLongitude());
-            pstmt.setDouble(3, in.getLantitude());
+            pstmt.setDouble(3, in.getLatitude());
             pstmt.executeUpdate();
             pstmt.close();
         } catch (Exception e) {
@@ -125,7 +125,7 @@ public class DBOperate {
             	t.setCar_id(rs.getString("car_id"));
             	t.setDate(rs.getDate("date"));
             	t.setLongitude(rs.getDouble("longitude"));
-            	t.setLantitude(rs.getDouble("lantitude"));
+            	t.setLatitude(rs.getDouble("lantitude"));
             	t.setSpeed(rs.getDouble("speed"));
             	t.setIs_idle(rs.getBoolean("is_idle"));
             	tl.add(t);
